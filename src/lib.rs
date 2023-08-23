@@ -50,4 +50,4 @@ mod future;
 mod stream;
 
 pub use future::{delayed, Delayed};
-pub use stream::{debounced, Debounced};
+pub use stream::{debounced, debounced_if, Debounced, DebouncedBuilder};

@@ -33,6 +33,12 @@ impl<T> Delayed<T> {
             value: Some(value),
         }
     }
+
+    // drop self and return the value
+    pub(crate) fn caesarean_birth(self) -> Option<T> {
+        // FIXME: will the sleep auto cancel?
+        self.value
+    }
 }
 
 impl<T> Unpin for Delayed<T> {}
